@@ -4,27 +4,27 @@
   - 1 CSV file are located in /root/
     - filename: dns_sample.csv
   
-  2. You must write an import program (any language you choose, Ex: Perl / Python / PHP)
-  - Directory: /root
-  - Program name: Ex: import.pl / import.py / import.php
+  - You must write an import program (any language you choose, Ex: Perl / Python / PHP)
+    - Directory: /root
+    - Program name: Ex: import.pl / import.py / import.php
   
-  3. In the CSV file you could see the following fields:
-  - frame.time_epoch : UNIX timestamp in nanoseconds
-  - ip.src : source ip address
-  - udp.srcport : source port
-  - ip.dst : destination ip address
-  - udp.dstport : destination port
-  - dns.qry.name : DNS A record query (FQDN)
+  - In the CSV file you could see the following fields:
+    - frame.time_epoch : UNIX timestamp in nanoseconds
+    - ip.src : source ip address
+    - udp.srcport : source port
+    - ip.dst : destination ip address
+    - udp.dstport : destination port
+    - dns.qry.name : DNS A record query (FQDN)
     
-  4. You must create a database table with the following fields:
-  - Date
-  - Time
-  - usec
-  - SourceIP
-  - SourcePort
-  - DestinationIP
-  - DestinationPort
-  - DNS A record query (FQDN) (eg: www.apple.com)
+  - You must create a database table with the following fields:
+    - Date
+    - Time
+    - usec
+    - SourceIP
+    - SourcePort
+    - DestinationIP
+    - DestinationPort
+    - DNS A record query (FQDN) (eg: www.apple.com)
   
   5. The program (import) shall read the CSV files and import into the database table (1.4) filling the fields packet by packet.
   
