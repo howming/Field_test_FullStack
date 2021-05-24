@@ -2,7 +2,7 @@
 
 ### 1. Write a program to decode and process CSV file into a database table
   1. 1 CSV file are located in /root/ < br >
-  - filename: dns_sample.csv
+  filename: dns_sample.csv
   
   2. You must write an import program (any language you choose, Ex: Perl / Python / PHP)
   - Directory: /root
