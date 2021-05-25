@@ -26,7 +26,7 @@ def result():
         coursor.close()
         conn.close()
 
-        if request.form['Password'] == data[0]["password"]:
+        if request.form['Password'] == data[0][1]:
             return render_template("result.html")
         else:
             return render_template('login.html')
