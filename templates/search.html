@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<body>
+<table border = 1 id="table">
+    <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>usec</th>
+        <th>SourceIP</th>
+        <th>SourcePort</th>
+        <th>DestinationIP</th>
+        <th>DestinationPort</th>
+        <th>FQDN</th>
+    </tr>
+    {% for Date, Time, usec, SourceIP, SourcePort, DestinationIP, DestinationPort, FQDN in data %}
+
+        <tr class="tabledata">
+            <td> {{ Date }} </td>
+            <td> {{ Time }} </td>
+            <td> {{ usec }} </td>
+            <td> {{ SourceIP }} </td>
+            <td> {{ SourcePort }} </td>
+            <td> {{ DestinationIP }} </td>
+            <td> {{ DestinationPort }} </td>
+            <td> {{ FQDN }} </td>
+        </tr>
+
+    {% endfor %}
+</table>
+<p><button id="next" type="button" >next</button></p>
+<p><button id="post" type="button" >post</button></p>
+<script>
+
+    $('#table').DataTable();
+
+    let i = 0;
+    let page = 0;
+    function next(){
+        page++;
+        $('.tabledata').html('');
+        for (){
+        $('table').append('
+        <tr class="tabledata">
+            <td> ${ Date } </td>
+            <td> ${ Time } </td>
+            <td> ${ usec } </td>
+            <td> ${ SourceIP } </td>
+            <td> ${ SourcePort } </td>
+            <td> ${ DestinationIP } </td>
+            <td> ${ DestinationPort } </td>
+            <td> ${ FQDN } </td>
+        </tr>
+        ')}
+    }
+
+    function next(){
+        page - 1;
+        $('.tabledata').html('');
+    }
+    $(() => {
+      $('#next').click(next)
+      $('#post').click(post)
+    })
+</script>
+</body>
+</html>
