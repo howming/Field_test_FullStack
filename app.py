@@ -35,7 +35,7 @@ def result():
 @app.route('/search',methods = ['POST'])
 def search():
     if request.method == 'POST':
-        
+
         conn = pymysql.connect(**sql_data)
         coursor = conn.cursor()
 
